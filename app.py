@@ -118,8 +118,7 @@ if st.button("📊 Générer la frise"):
     ax.set_yticks(list(range(len(y_positions) + len(ei_names))))
     ax.set_yticklabels(list(y_positions.keys()) + ei_names)
     ax.set_xticks(list(x_positions.values()))
-    ax.set_xticklabels([f"{d.strftime('%d/%m')}
-{d.strftime('%Y')}" for d in all_dates], rotation=0, ha='center')
+    ax.set_xticklabels([f"{d.strftime('%d/%m')}\n{d.strftime('%Y')}" for d in all_dates], rotation=0, ha='center')
     ax.set_ylabel("Traitements / EI")
     ax.grid(axis='x', linestyle=':', linewidth=0.5)
     ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.1), ncol=3)
